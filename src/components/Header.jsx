@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
-// import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { auth, provider } from "../firebase";
 
 import {
@@ -12,9 +12,18 @@ import {
 
 const Header = () => {
   const dispatch = useDispatch();
-  // const history = useHistory();
+  const navigate = useNavigate();
   const userName = useSelector(selectUserName);
   const userPhoto = useSelector(selectUserPhoto);
+
+  useEffect(() => {
+    auth.onAuthStateChanged(async (user) => {
+      if (user) {
+        setUser(user);
+        navigate("/home");
+      }
+    });
+  }, [userName]);
 
   const handleAuth = () => {
     auth
