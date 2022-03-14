@@ -40,3 +40,13 @@ a {
     font-size: 14px;
   }
 }
+
+/* ::-webkit-scrollbar {
+  width: 4px;
+  background-color: var(--color-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-golden);
+  border-radius: 20px;
+} */
