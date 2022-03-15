@@ -41,12 +41,12 @@ a {
   }
 }
 
-/* ::-webkit-scrollbar {
-  width: 4px;
-  background-color: var(--color-black);
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #090b13;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--color-golden);
+  background-color: rgb(198, 198, 198);
   border-radius: 20px;
-} */
+}
